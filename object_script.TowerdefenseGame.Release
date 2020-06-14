@@ -1,0 +1,12 @@
+release/captain.o
+release/defensetowerparent.o
+release/defensetowerpit.o
+release/ironman.o
+release/main.o
+release/mainwindow.o
+release/monster.o
+release/select.o
+release/spiderman.o
+release/startform.o
+release/thor.o
+release/qrc_res.o

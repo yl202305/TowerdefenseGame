@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/enemy1.png</file>
+        <file>image/enemy2.png</file>
+        <file>image/enemy3.png</file>
+        <file>image/enemy4.png</file>
+        <file>image/enemy5.png</file>
+        <file>image/ironman1.png</file>
+        <file>image/ironman2.png</file>
+        <file>image/ironman3.png</file>
+        <file>image/selection.png</file>
+        <file>image/spiderman1.png</file>
+        <file>image/spiderman2.png</file>
+        <file>image/spiderman3.png</file>
+        <file>image/base1.png</file>
+        <file>image/base2.png</file>
+        <file>image/background.png</file>
+        <file>image/captain.png</file>
+        <file>image/captainbullet1.png</file>
+        <file>image/captainbullet2.png</file>
+        <file>image/captainbullet3.png</file>
+        <file>image/explosion2.png</file>
+        <file>image/explosion3.png</file>
+        <file>image/explosion4.png</file>
+        <file>image/explosion5.png</file>
+        <file>image/explosion6.png</file>
+        <file>image/explsion7.png</file>
+        <file>image/spidermanbuy.png</file>
+        <file>image/ironmanbullet.png</file>
+        <file>image/ironmanbuy.png</file>
+        <file>image/house.png</file>
+        <file>image/thor.png</file>
+        <file>image/stone.png</file>
+        <file>image/grass.png</file>
+        <file>image/ground.png</file>
+        <file>image/explosion1.png</file>
+        <file>image/update.png</file>
+        <file>image/base3.png</file>
+        <file>image/base4.png</file>
+    </qresource>
+</RCC>
