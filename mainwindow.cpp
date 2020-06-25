@@ -6,6 +6,7 @@
 #include "spiderman.h"
 #include "thor.h"
 #include "captain.h"
+#include "audioplayer.h"
 #include <QPushButton>
 
 #define MouseClickRegion(X, Width, Y, Height)     \
@@ -20,6 +21,7 @@ abs(sqrt((((X1) - (X2)) * ((X1) - (X2))) + (((Y1) - (Y2)) * ((Y1) - (Y2)))))
 
 #define InsterMonster(PathNum, StaCoorNum, MonsterId)     \
 MonsterVector.push_back(new Monster(pointarr[PathNum], PathLength[PathNum], X40(staco[StaCoorNum].x), X40(staco[StaCoorNum].y), MonsterId));
+
 
 void Mainwindow::paintEvent(QPaintEvent *)
 {
@@ -280,7 +282,7 @@ void Mainwindow::mousePressEvent(QMouseEvent *ev)
         if (MouseClickRegion(ASubBut[i].X, ASubBut[i].Width, ASubBut[i].Y, ASubBut[i].Height) && selectbox->getDisplay())
         {
             selectbox->setDisplay(false);      //取消显示选择框
-
+            audioPlayer->playSound(TowerPlaceSound);
             //根据点击的不同的按钮，将防御塔子类插入到防御塔父类数组
             switch (i)
             {
@@ -345,6 +347,9 @@ Mainwindow::Mainwindow(int LevelNumber) : LevelNumber(LevelNumber)
     victorylable->setText(QString("Congratulations! You Win!"));
     victorylable->hide();
 
+    //插入背景音乐
+    audioPlayer=new AudioPlayer(this);
+    audioPlayer->startBGM();
     QTimer* timer2 = new QTimer(this);      //用于插入怪物定时器
     timer2->start(2000);
 
@@ -476,7 +481,9 @@ Mainwindow::Mainwindow(int LevelNumber) : LevelNumber(LevelNumber)
                 life--;                         //我们的生命数量-1
                 lifelable->setText(QString("Life:%1").arg(life));
 
+
                 if (life <= 0) this->close();   //生命值为0时关闭该窗口
+
 
                 break;
             }
@@ -500,14 +507,18 @@ Mainwindow::Mainwindow(int LevelNumber) : LevelNumber(LevelNumber)
 
                         if ((*monit)->getLife() <= 0) //生命值为空时
                         {
+
                             //判断一下其他防御塔的目标怪物是否和当前防御塔消灭的怪物重复，如果重复，则将那一个防御塔的目标怪物也设为空
                             for (auto defei2 : DefenseTowerVector)
                                 if (defei2->getAimMonster() == *monit)
-                                    defei2->setAimMonster(NULL);
+                                    defei2->setAimMonster(NULL);                           
 
                             MonsterVector.erase(monit);    //删除怪物
+
                             money += RewardMoney;       //击败怪物增加金钱
                             moneylable->setText(QString("Money:%1").arg(money));//刷新标签
+
+
                         }
 
                         //这里不能将防御塔目标怪物设为空，因为防御塔的子弹攻击到的怪物不一定是该防御塔的目标怪物
@@ -580,10 +591,6 @@ void Mainwindow::IrodMonsProgDefa(CoorStr** Waypointarr1, CoorStr** Waypointarr2
     counter++;          //计数器+1
     update();
 }
-
-//根据数组画出地图函数
-//由绘图函数调用
-
 
 
 

@@ -11,6 +11,7 @@
 #include "select.h" //选择框类
 #include "defensetowerparent.h" //防御塔父类
 #include "monster.h" //怪物类
+#include "audioplayer.h"
 
 class Mainwindow:public QWidget{
 private:
@@ -61,6 +62,8 @@ private:
     const int LevelNumber; //关卡标识
 
     bool DisplayAllRange=false; //标识是否显示所有防御塔的攻击范围
+
+    AudioPlayer *audioPlayer;
 
 public:
     Mainwindow(int); //构造函数

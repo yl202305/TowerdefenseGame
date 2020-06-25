@@ -27,7 +27,7 @@ public:
     {
         if (StartForm->objectName().isEmpty())
             StartForm->setObjectName(QString::fromUtf8("StartForm"));
-        StartForm->resize(986, 582);
+        StartForm->resize(986, 607);
         StartForm->setStyleSheet(QString::fromUtf8("image: url(:/image/background.png);"));
         pushButton = new QPushButton(StartForm);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));

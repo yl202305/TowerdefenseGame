@@ -6,12 +6,8 @@
         <file>image/enemy4.png</file>
         <file>image/enemy5.png</file>
         <file>image/ironman1.png</file>
-        <file>image/ironman2.png</file>
-        <file>image/ironman3.png</file>
         <file>image/selection.png</file>
         <file>image/spiderman1.png</file>
-        <file>image/spiderman2.png</file>
-        <file>image/spiderman3.png</file>
         <file>image/base1.png</file>
         <file>image/base2.png</file>
         <file>image/background.png</file>
@@ -37,5 +33,7 @@
         <file>image/update.png</file>
         <file>image/base3.png</file>
         <file>image/base4.png</file>
+        <file>image/bgm.mp3</file>
+        <file>image/enemydeath.mp3</file>
     </qresource>
 </RCC>

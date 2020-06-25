@@ -248,8 +248,10 @@ Makefile: TowerdefenseGame.pro ../5.12.7/mingw73_64/mkspecs/win32-g++/qmake.conf
 		../5.12.7/mingw73_64/mkspecs/features/yacc.prf \
 		../5.12.7/mingw73_64/mkspecs/features/lex.prf \
 		TowerdefenseGame.pro \
+		../5.12.7/mingw73_64/lib/Qt5Multimedia.prl \
 		../5.12.7/mingw73_64/lib/Qt5Widgets.prl \
 		../5.12.7/mingw73_64/lib/Qt5Gui.prl \
+		../5.12.7/mingw73_64/lib/Qt5Network.prl \
 		../5.12.7/mingw73_64/lib/Qt5Core.prl \
 		../5.12.7/mingw73_64/lib/qtmain.prl
 	$(QMAKE) -o Makefile TowerdefenseGame.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -438,8 +440,10 @@ Makefile: TowerdefenseGame.pro ../5.12.7/mingw73_64/mkspecs/win32-g++/qmake.conf
 ../5.12.7/mingw73_64/mkspecs/features/yacc.prf:
 ../5.12.7/mingw73_64/mkspecs/features/lex.prf:
 TowerdefenseGame.pro:
+../5.12.7/mingw73_64/lib/Qt5Multimedia.prl:
 ../5.12.7/mingw73_64/lib/Qt5Widgets.prl:
 ../5.12.7/mingw73_64/lib/Qt5Gui.prl:
+../5.12.7/mingw73_64/lib/Qt5Network.prl:
 ../5.12.7/mingw73_64/lib/Qt5Core.prl:
 ../5.12.7/mingw73_64/lib/qtmain.prl:
 qmake: FORCE
